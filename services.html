@@ -1,0 +1,1271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>PlayStation Services | PH² PLAY HUB</title>
+
+<meta name="description"
+content="PH² PLAY HUB PlayStation console repair and service for PS1, PS2, PS3, PS4, PS5, PSP and PS Vita.">
+
+<style>
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: #07070c;
+  color: white;
+  line-height: 1.6;
+}
+
+/* =========================
+   HEADER
+========================= */
+
+header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+
+  background: rgba(5,5,10,0.97);
+  border-bottom: 1px solid #292933;
+}
+
+.nav {
+  max-width: 1200px;
+  margin: auto;
+
+  padding: 16px 22px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  color: white;
+  text-decoration: none;
+
+  font-size: 25px;
+  font-weight: 900;
+}
+
+.logo span {
+  color: #a855f7;
+}
+
+nav {
+  display: flex;
+  gap: 22px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+nav a:hover,
+nav a.active {
+  color: #a855f7;
+}
+
+/* =========================
+   HERO
+========================= */
+
+.hero {
+  min-height: 70vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  text-align: center;
+
+  padding: 100px 20px;
+
+  background:
+    radial-gradient(
+      circle,
+      rgba(168,85,247,0.30),
+      transparent 55%
+    ),
+    linear-gradient(
+      135deg,
+      #07070c,
+      #180a22,
+      #07070c
+    );
+}
+
+.hero-content {
+  max-width: 900px;
+}
+
+.hero h1 {
+  font-size: clamp(50px, 9vw, 95px);
+  line-height: 1;
+}
+
+.hero h1 span {
+  color: #a855f7;
+}
+
+.hero h2 {
+  margin-top: 22px;
+
+  font-size: clamp(25px, 5vw, 42px);
+}
+
+.hero p {
+  color: #aaa;
+
+  max-width: 750px;
+
+  margin: 20px auto 30px;
+
+  font-size: 18px;
+}
+
+/* =========================
+   BUTTON
+========================= */
+
+.btn {
+  display: inline-block;
+
+  padding: 14px 28px;
+
+  border-radius: 30px;
+
+  background: #a855f7;
+
+  color: white;
+
+  text-decoration: none;
+
+  font-weight: bold;
+
+  transition: .3s;
+}
+
+.btn:hover {
+  background: #c084fc;
+
+  transform: translateY(-3px);
+}
+
+/* =========================
+   GENERAL
+========================= */
+
+.container {
+  max-width: 1200px;
+
+  margin: auto;
+
+  padding: 80px 22px;
+}
+
+.section-title {
+  text-align: center;
+
+  margin-bottom: 45px;
+}
+
+.section-title h2 {
+  font-size: 42px;
+
+  text-transform: uppercase;
+}
+
+.section-title span {
+  color: #a855f7;
+}
+
+.section-title p {
+  color: #999;
+
+  margin-top: 8px;
+}
+
+/* =========================
+   CONSOLES
+========================= */
+
+.console-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(auto-fit, minmax(250px, 1fr));
+
+  gap: 25px;
+}
+
+.console-card {
+  background: #111119;
+
+  border: 1px solid #292933;
+
+  border-radius: 20px;
+
+  padding: 18px;
+
+  text-align: center;
+
+  transition: .3s;
+}
+
+.console-card:hover {
+  transform: translateY(-8px);
+
+  border-color: #a855f7;
+
+  box-shadow:
+    0 0 30px rgba(168,85,247,.2);
+}
+
+.console-image {
+  width: 100%;
+
+  height: 220px;
+
+  background: #18121f;
+
+  border-radius: 15px;
+
+  overflow: hidden;
+
+  margin-bottom: 20px;
+}
+
+.console-image img {
+  width: 100%;
+
+  height: 100%;
+
+  object-fit: contain;
+
+  display: block;
+}
+
+.console-placeholder {
+  height: 100%;
+
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+
+  font-size: 70px;
+
+  color: #a855f7;
+}
+
+.console-card h3 {
+  font-size: 28px;
+
+  margin-bottom: 8px;
+}
+
+.console-card p {
+  color: #999;
+
+  margin-bottom: 20px;
+}
+
+/* =========================
+   SERVICE TYPES
+========================= */
+
+.service-section {
+  background: #0c0c12;
+}
+
+.service-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(auto-fit, minmax(250px, 1fr));
+
+  gap: 20px;
+}
+
+.service-card {
+  background: #111119;
+
+  border: 1px solid #292933;
+
+  border-radius: 16px;
+
+  padding: 25px;
+
+  transition: .3s;
+}
+
+.service-card:hover {
+  border-color: #a855f7;
+
+  transform: translateY(-5px);
+}
+
+.service-icon {
+  font-size: 40px;
+
+  margin-bottom: 10px;
+}
+
+.service-card h3 {
+  color: #c084fc;
+
+  font-size: 21px;
+
+  margin-bottom: 8px;
+}
+
+.service-card p {
+  color: #999;
+}
+
+/* =========================
+   PROCESS
+========================= */
+
+.process-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(auto-fit, minmax(200px, 1fr));
+
+  gap: 25px;
+
+  text-align: center;
+}
+
+.step {
+  padding: 20px;
+}
+
+.step-number {
+  width: 60px;
+  height: 60px;
+
+  margin: 0 auto 15px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background: #a855f7;
+
+  font-size: 24px;
+
+  font-weight: bold;
+}
+
+.step h3 {
+  margin-bottom: 8px;
+}
+
+.step p {
+  color: #999;
+}
+
+/* =========================
+   CONTACT
+========================= */
+
+.contact {
+  text-align: center;
+
+  background:
+    radial-gradient(
+      circle,
+      rgba(168,85,247,.25),
+      transparent 60%
+    ),
+    #100817;
+}
+
+.contact-box {
+  max-width: 850px;
+
+  margin: auto;
+
+  padding: 55px 25px;
+
+  border: 1px solid #a855f7;
+
+  border-radius: 25px;
+}
+
+.contact-box h2 {
+  font-size: clamp(35px, 6vw, 55px);
+
+  margin-bottom: 12px;
+}
+
+.contact-box h2 span {
+  color: #a855f7;
+}
+
+.contact-box p {
+  color: #aaa;
+
+  margin-bottom: 25px;
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+  text-align: center;
+
+  padding: 40px 20px;
+
+  background: #050509;
+
+  border-top: 1px solid #22222c;
+}
+
+footer h3 {
+  font-size: 26px;
+}
+
+footer h3 span {
+  color: #a855f7;
+}
+
+footer p {
+  color: #777;
+
+  margin-top: 6px;
+
+  font-size: 14px;
+}
+
+/* =========================
+   WHATSAPP
+========================= */
+
+.whatsapp {
+  position: fixed;
+
+  right: 22px;
+
+  bottom: 22px;
+
+  width: 60px;
+
+  height: 60px;
+
+  border-radius: 50%;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  background: #25D366;
+
+  color: white;
+
+  text-decoration: none;
+
+  font-size: 29px;
+
+  z-index: 999;
+
+  box-shadow:
+    0 5px 25px rgba(0,0,0,.4);
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media(max-width:700px) {
+
+  .nav {
+    flex-direction: column;
+
+    gap: 12px;
+  }
+
+  nav {
+    gap: 12px;
+
+    flex-wrap: wrap;
+
+    justify-content: center;
+  }
+
+  nav a {
+    font-size: 14px;
+  }
+
+  .hero {
+    min-height: 70vh;
+  }
+
+}
+
+</style>
+</head>
+
+
+<body>
+
+
+<!-- =========================
+     NAVIGATION
+========================= -->
+
+<header>
+
+<div class="nav">
+
+<a href="index.html" class="logo">
+PH<span>²</span> PLAY HUB
+</a>
+
+<nav>
+
+<a href="index.html">
+Home
+</a>
+
+<a href="games.html">
+Games
+</a>
+
+<a href="services.html" class="active">
+Services
+</a>
+
+</nav>
+
+</div>
+
+</header>
+
+
+<!-- =========================
+     HERO
+========================= -->
+
+<section class="hero">
+
+<div class="hero-content">
+
+<h1>
+PH<span>²</span> PLAY HUB
+</h1>
+
+<h2>
+PlayStation All Console Services
+</h2>
+
+<p>
+Professional PlayStation console inspection,
+maintenance and repair services for
+PS1, PS2, PS3, PS4, PS5, PSP and PS Vita.
+</p>
+
+<a
+class="btn"
+href="https://wa.me/919363735190?text=Hello%20PH2%20PLAY%20HUB%2C%20I%20need%20PlayStation%20service."
+target="_blank">
+
+💬 Contact Us on WhatsApp
+
+</a>
+
+</div>
+
+</section>
+
+
+<!-- =========================
+     ALL CONSOLES
+========================= -->
+
+<section>
+
+<div class="container">
+
+<div class="section-title">
+
+<h2>
+All <span>PlayStation</span> Consoles
+</h2>
+
+<p>
+Console service and troubleshooting
+</p>
+
+</div>
+
+
+<div class="console-grid">
+
+
+<!-- PS1 -->
+
+<div class="console-card">
+
+<div class="console-image">
+
+<img
+src="images/ps1.jpg"
+alt="PlayStation 1"
+onerror="
+this.style.display='none';
+this.nextElementSibling.style.display='flex';
+">
+
+<div class="console-placeholder"
+style="display:none;">
+🎮
+</div>
+
+</div>
+
+<h3>PS1</h3>
+
+<p>
+PlayStation 1 console service,
+maintenance and troubleshooting.
+</p>
+
+<a
+class="btn"
+href="https://wa.me/919363735190?text=Hello%20PH2%20PLAY%20HUB%2C%20I%20need%20PS1%20service."
+target="_blank">
+
+PS1 Service
+
+</a>
+
+</div>
+
+
+<!-- PS2 -->
+
+<div class="console-card">
+
+<div class="console-image">
+
+<img
+src="images/ps2.jpg"
+alt="PlayStation 2"
+onerror="
+this.style.display='none';
+this.nextElementSibling.style.display='flex';
+">
+
+<div class="console-placeholder"
+style="display:none;">
+🎮
+</div>
+
+</div>
+
+<h3>PS2</h3>
+
+<p>
+PlayStation 2 console service,
+maintenance and troubleshooting.
+</p>
+
+<a
+class="btn"
+href="https://wa.me/919363735190?text=Hello%20PH2%20PLAY%20HUB%2C%20I%20need%20PS2%20service."
+target="_blank">
+
+PS2 Service
+
+</a>
+
+</div>
+
+
+<!-- PS3 -->
+
+<div class="console-card">
+
+<div class="console-image">
+
+<img
+src="images/ps3.jpg"
+alt="PlayStation 3"
+onerror="
+this.style.display='none';
+this.nextElementSibling.style.display='flex';
+">
+
+<div class="console-placeholder"
+style="display:none;">
+🎮
+</div>
+
+</div>
+
+<h3>PS3</h3>
+
+<p>
+PlayStation 3 repair,
+maintenance and troubleshooting.
+</p>
+
+<a
+class="btn"
+href="https://wa.me/919363735190?text=Hello%20PH2%20PLAY%20HUB%2C%20I%20need%20PS3%20service."
+target="_blank">
+
+PS3 Service
+
+</a>
+
+</div>
+
+
+<!-- PS4 -->
+
+<div class="console-card">
+
+<div class="console-image">
+
+<img
+src="images/ps4.jpg"
+alt="PlayStation 4"
+onerror="
+this.style.display='none';
+this.nextElementSibling.style.display='flex';
+">
+
+<div class="console-placeholder"
+style="display:none;">
+🎮
+</div>
+
+</div>
+
+<h3>PS4</h3>
+
+<p>
+PlayStation 4 repair,
+maintenance and troubleshooting.
+</p>
+
+<a
+class="btn"
+href="https://wa.me/919363735190?text=Hello%20PH2%20PLAY%20HUB%2C%20I%20need%20PS4%20service."
+target="_blank">
+
+PS4 Service
+
+</a>
+
+</div>
+
+
+<!-- PS5 -->
+
+<div class="console-card">
+
+<div class="console-image">
+
+<img
+src="images/ps5.jpg"
+alt="PlayStation 5"
+onerror="
+this.style.display='none';
+this.nextElementSibling.style.display='flex';
+">
+
+<div class="console-placeholder"
+style="display:none;">
+🎮
+</div>
+
+</div>
+
+<h3>PS5</h3>
+
+<p>
+PlayStation 5 repair,
+maintenance and troubleshooting.
+</p>
+
+<a
+class="btn"
+href="https://wa.me/919363735190?text=Hello%20PH2%20PLAY%20HUB%2C%20I%20need%20PS5%20service."
+target="_blank">
+
+PS5 Service
+
+</a>
+
+</div>
+
+
+<!-- PSP -->
+
+<div class="console-card">
+
+<div class="console-image">
+
+<img
+src="images/psp.jpg"
+alt="PSP"
+onerror="
+this.style.display='none';
+this.nextElementSibling.style.display='flex';
+">
+
+<div class="console-placeholder"
+style="display:none;">
+🎮
+</div>
+
+</div>
+
+<h3>PSP</h3>
+
+<p>
+PSP handheld console
+service and troubleshooting.
+</p>
+
+<a
+class="btn"
+href="https://wa.me/919363735190?text=Hello%20PH2%20PLAY%20HUB%2C%20I%20need%20PSP%20service."
+target="_blank">
+
+PSP Service
+
+</a>
+
+</div>
+
+
+<!-- PS VITA -->
+
+<div class="console-card">
+
+<div class="console-image">
+
+<img
+src="images/ps-vita.jpg"
+alt="PS Vita"
+onerror="
+this.style.display='none';
+this.nextElementSibling.style.display='flex';
+">
+
+<div class="console-placeholder"
+style="display:none;">
+🎮
+</div>
+
+</div>
+
+<h3>PS Vita</h3>
+
+<p>
+PS Vita handheld console
+service and troubleshooting.
+</p>
+
+<a
+class="btn"
+href="https://wa.me/919363735190?text=Hello%20PH2%20PLAY%20HUB%2C%20I%20need%20PS%20Vita%20service."
+target="_blank">
+
+PS Vita Service
+
+</a>
+
+</div>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- =========================
+     SERVICE TYPES
+========================= -->
+
+<section class="service-section">
+
+<div class="container">
+
+<div class="section-title">
+
+<h2>
+Repair & <span>Services</span>
+</h2>
+
+<p>
+Common PlayStation service categories
+</p>
+
+</div>
+
+
+<div class="service-grid">
+
+
+<div class="service-card">
+
+<div class="service-icon">
+🔧
+</div>
+
+<h3>
+Console Diagnosis
+</h3>
+
+<p>
+Inspection and troubleshooting
+to identify console problems.
+</p>
+
+</div>
+
+
+<div class="service-card">
+
+<div class="service-icon">
+🧹
+</div>
+
+<h3>
+Console Cleaning
+</h3>
+
+<p>
+General internal and external
+console maintenance.
+</p>
+
+</div>
+
+
+<div class="service-card">
+
+<div class="service-icon">
+🌡️
+</div>
+
+<h3>
+Overheating Issues
+</h3>
+
+<p>
+Inspection and service for
+overheating-related problems.
+</p>
+
+</div>
+
+
+<div class="service-card">
+
+<div class="service-icon">
+💿
+</div>
+
+<h3>
+Disc Drive Problems
+</h3>
+
+<p>
+Disc reading and drive-related
+troubleshooting.
+</p>
+
+</div>
+
+
+<div class="service-card">
+
+<div class="service-icon">
+🖥️
+</div>
+
+<h3>
+HDMI Problems
+</h3>
+
+<p>
+HDMI display and connection
+problem diagnosis.
+</p>
+
+</div>
+
+
+<div class="service-card">
+
+<div class="service-icon">
+⚡
+</div>
+
+<h3>
+Power Problems
+</h3>
+
+<p>
+Console power-related
+diagnosis and service.
+</p>
+
+</div>
+
+
+<div class="service-card">
+
+<div class="service-icon">
+🎮
+</div>
+
+<h3>
+Controller Issues
+</h3>
+
+<p>
+Controller inspection and
+troubleshooting.
+</p>
+
+</div>
+
+
+<div class="service-card">
+
+<div class="service-icon">
+🛠️
+</div>
+
+<h3>
+General Maintenance
+</h3>
+
+<p>
+General PlayStation maintenance
+and service.
+</p>
+
+</div>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- =========================
+     PROCESS
+========================= -->
+
+<section>
+
+<div class="container">
+
+<div class="section-title">
+
+<h2>
+Our <span>Service Process</span>
+</h2>
+
+<p>
+Simple and easy
+</p>
+
+</div>
+
+
+<div class="process-grid">
+
+
+<div class="step">
+
+<div class="step-number">
+1
+</div>
+
+<h3>
+Contact
+</h3>
+
+<p>
+Send us your console problem
+through WhatsApp.
+</p>
+
+</div>
+
+
+<div class="step">
+
+<div class="step-number">
+2
+</div>
+
+<h3>
+Diagnosis
+</h3>
+
+<p>
+We inspect the console
+and identify the problem.
+</p>
+
+</div>
+
+
+<div class="step">
+
+<div class="step-number">
+3
+</div>
+
+<h3>
+Service
+</h3>
+
+<p>
+Service is performed
+after confirmation.
+</p>
+
+</div>
+
+
+<div class="step">
+
+<div class="step-number">
+4
+</div>
+
+<h3>
+Ready
+</h3>
+
+<p>
+Collect your console
+after service completion.
+</p>
+
+</div>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- =========================
+     CONTACT
+========================= -->
+
+<section class="contact">
+
+<div class="container">
+
+<div class="contact-box">
+
+<h2>
+Need <span>PlayStation Service?</span>
+</h2>
+
+<p>
+Contact PH² PLAY HUB for
+console repair and service enquiries.
+</p>
+
+<a
+class="btn"
+href="https://wa.me/919363735190?text=Hello%20PH2%20PLAY%20HUB%2C%20I%20want%20to%20book%20a%20PlayStation%20service."
+target="_blank">
+
+📱 Book Service on WhatsApp
+
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- =========================
+     FOOTER
+========================= -->
+
+<footer>
+
+<h3>
+PH<span>²</span> PLAY HUB
+</h3>
+
+<p>
+PlayStation • Games • Consoles • Accessories • Services
+</p>
+
+<p>
+Ullur Chettaimadapam, Kumbakonam 612001
+</p>
+
+<p>
+© 2026 PH² PLAY HUB. All Rights Reserved.
+</p>
+
+</footer>
+
+
+<!-- =========================
+     WHATSAPP
+========================= -->
+
+<a
+class="whatsapp"
+href="https://wa.me/919363735190?text=Hello%20PH2%20PLAY%20HUB"
+target="_blank"
+aria-label="WhatsApp">
+
+💬
+
+</a>
+
+
+</body>
+</html>
