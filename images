@@ -1,8 +1,10 @@
-PH² PLAY HUB
+ph2playhub.in/
 │
-├── index.html       ← Home page
-├── games.html       ← Games page
+├── index.html
+├── games.html
+├── services.html
 │
+└── images/
     ├── logo.png
     ├── god-of-war.jpg
     ├── spider-man.jpg
