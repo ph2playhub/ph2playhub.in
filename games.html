@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Games | PH² PLAY HUB</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background: #08080d;
+      color: white;
+    }
+
+    header {
+      background: #09090f;
+      border-bottom: 1px solid #292933;
+      padding: 18px 25px;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .nav {
+      max-width: 1150px;
+      margin: auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      font-size: 25px;
+      font-weight: bold;
+      color: white;
+      text-decoration: none;
+    }
+
+    .logo span {
+      color: #a855f7;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin-left: 20px;
+    }
+
+    nav a:hover {
+      color: #a855f7;
+    }
+
+    .hero {
+      text-align: center;
+      padding: 90px 20px;
+      background:
+        radial-gradient(circle, rgba(168,85,247,.25), transparent 55%),
+        #08080d;
+    }
+
+    .hero h1 {
+      font-size: clamp(45px, 8vw, 80px);
+    }
+
+    .hero h1 span {
+      color: #a855f7;
+    }
+
+    .hero p {
+      margin-top: 15px;
+      color: #aaa;
+      font-size: 18px;
+    }
+
+    .container {
+      max-width: 1150px;
+      margin: auto;
+      padding: 70px 20px;
+    }
+
+    .title {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    .title h2 {
+      font-size: 38px;
+    }
+
+    .title span {
+      color: #a855f7;
+    }
+
+    .games {
+      display: grid;
+      grid-template-columns:
+        repeat(auto-fit, minmax(250px, 1fr));
+      gap: 25px;
+    }
+
+    .card {
+      background: #111119;
+      border: 1px solid #292933;
+      border-radius: 18px;
+      padding: 20px;
+      text-align: center;
+      transition: .3s;
+    }
+
+    .card:hover {
+      transform: translateY(-7px);
+      border-color: #a855f7;
+      box-shadow: 0 0 25px rgba(168,85,247,.2);
+    }
+
+    .game-image {
+      width: 100%;
+      height: 210px;
+      background: #18121f;
+      border-radius: 12px;
+      overflow: hidden;
+      margin-bottom: 18px;
+    }
+
+    .game-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .game-image .placeholder {
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 60px;
+    }
+
+    .card h3 {
+      font-size: 24px;
+      margin-bottom: 8px;
+    }
+
+    .card p {
+      color: #999;
+      margin-bottom: 18px;
+    }
+
+    .button {
+      display: inline-block;
+      padding: 12px 22px;
+      border-radius: 25px;
+      background: #a855f7;
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .button:hover {
+      background: #c084fc;
+    }
+
+    footer {
+      text-align: center;
+      padding: 35px 20px;
+      background: #050509;
+      color: #777;
+    }
+
+    footer span {
+      color: #a855f7;
+    }
+
+    @media(max-width:600px) {
+      nav a {
+        margin-left: 8px;
+        font-size: 14px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <div class="nav">
+
+    <a href="index.html" class="logo">
+      PH<span>²</span> PLAY HUB
+    </a>
+
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="games.html">Games</a>
+    </nav>
+
+  </div>
+</header>
+
+<section class="hero">
+
+  <h1>PH<span>²</span> PLAY HUB</h1>
+
+  <p>
+    Explore our gaming collection
+  </p>
+
+</section>
+
+<main class="container">
+
+  <div class="title">
+    <h2>Featured <span>Games</span></h2>
+  </div>
+
+  <div class="games">
+
+    <!-- GOD OF WAR -->
+    <div class="card">
+
+      <div class="game-image">
+        <img
+          src="images/god-of-war.jpg"
+          alt="God of War"
+          onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+
+        <div class="placeholder" style="display:none;">
+          ⚔️
+        </div>
+      </div>
+
+      <h3>God of War</h3>
+
+      <p>
+        Action and adventure gaming.
+      </p>
+
+      <a
+        class="button"
+        href="https://wa.me/919363735190?text=Hello%20PH2%20PLAY%20HUB%2C%20I%20want%20God%20of%20War."
+        target="_blank">
+        Enquire
+      </a>
+
+    </div>
+
+    <!-- SPIDER-MAN -->
+    <div class="card">
+
+      <div class="game-image">
+
+        <img
+          src="images/spider-man.jpg"
+          alt="Spider-Man"
+          onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+
+        <div class="placeholder" style="display:none;">
+          🕷️
+        </div>
+
+      </div>
+
+      <h3>Spider-Man</h3>
+
+      <p>
+        Experience Spider-Man gaming.
+      </p>
+
+      <a
+        class="button"
+        href="https://wa.me/919363735190?text=Hello%20PH2%20PLAY%20HUB%2C%20I%20want%20Spider-Man."
+        target="_blank">
+        Enquire
+      </a>
+
+    </div>
+
+    <!-- GTA -->
+    <div class="card">
+
+      <div class="game-image">
+
+        <img
+          src="images/gta.jpg"
+          alt="GTA"
+          onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+
+        <div class="placeholder" style="display:none;">
+          🔥
+        </div>
+
+      </div>
+
+      <h3>GTA</h3>
+
+      <p>
+        Open-world gaming action.
+      </p>
+
+      <a
+        class="button"
+        href="https://wa.me/919363735190?text=Hello%20PH2%20PLAY%20HUB%2C%20I%20want%20GTA."
+        target="_blank">
+        Enquire
+      </a>
+
+    </div>
+
+    <!-- THE LAST OF US -->
+    <div class="card">
+
+      <div class="game-image">
+
+        <img
+          src="images/last-of-us.jpg"
+          alt="The Last of Us"
+          onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+
+        <div class="placeholder" style="display:none;">
+          🧟
+        </div>
+
+      </div>
+
+      <h3>The Last of Us</h3>
+
+      <p>
+        Story-driven survival adventure.
+      </p>
+
+      <a
+        class="button"
+        href="https://wa.me/919363735190?text=Hello%20PH2%20PLAY%20HUB%2C%20I%20want%20The%20Last%20of%20Us."
+        target="_blank">
+        Enquire
+      </a>
+
+    </div>
+
+  </div>
+
+</main>
+
+<footer>
+
+  <p>
+    © 2026 <span>PH² PLAY HUB</span>.
+    All Rights Reserved.
+  </p>
+
+</footer>
+
+</body>
+</html>
