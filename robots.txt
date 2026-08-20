@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://ph2playhub.github.io/ph2playhub.in/sitemap.xml
